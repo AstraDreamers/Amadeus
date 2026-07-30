@@ -4,9 +4,9 @@
 *.out
 
 # ESP-IDF Build Artifacts
-client/build/
-client/sdkconfig
-client/sdkconfig.old
+firmware/build/
+firmware/sdkconfig
+firmware/sdkconfig.old
 
 # Python & Trainer
 trainer/.venv/
