@@ -1,0 +1,20 @@
+# Arch & System
+.DS_Store
+*.swp
+*.out
+
+# ESP-IDF Build Artifacts
+firmware/build/
+firmware/sdkconfig
+firmware/sdkconfig.old
+
+# Python & Trainer
+trainer/.venv/
+trainer/__pycache__/
+trainer/data/*.wav
+trainer/*.pt
+trainer/*.pth
+
+# IDE
+.vscode/
+.idea/

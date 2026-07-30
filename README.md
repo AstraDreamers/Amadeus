@@ -6,3 +6,14 @@
 
 # Amadeus
 
+# Basic Instructions
+
+Create Python virtual environment and instal dependencies:
+
+```sh
+cd pc_trainer
+python -m venv .venv
+source .venv/bin/activate
+
+pip install torch torchvision torchaudio librosa matplotlib
+```
