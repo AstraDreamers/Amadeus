@@ -6,17 +6,22 @@
 
 # Amadeus
 
+![WIP](https://img.shields.io/badge/Work-In%20Progress-ffffaa)
+![Status](https://img.shields.io/badge/Status-Not%20Ready-ffaaaa)
+![Status](https://img.shields.io/badge/Architecture-BNN-ffaaff)
+[![License](https://img.shields.io/badge/License-GPLv3-aaffaa)](LICENSE)
+
+**Amadeus** is a lightweight, edge-AI system designed for real-time Beats Per Minute (BPM) estimation from live music streams. Driven by a custom Binary Neural Network (BNN), it is fully optimized to run on resource-constrained microcontrollers like the ESP32-C3 (RISC-V).
+
+This project's name is inspired by the advanced AI system *Amadeus* created by Makise Kurisu and Hiyajo Maho in *Steins;Gate 0* movie.
+
+# Technicial Architecture
+
+Coming soon!
+
 # Basic Instructions
 
-Create Python virtual environment and instal dependencies:
-
-```sh
-cd pc_trainer
-python -m venv .venv
-source .venv/bin/activate
-
-pip install torch torchvision torchaudio librosa matplotlib
-```
+Coming soon!
 
 # References & Citations
 
