@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "Trainer",
+      "path": "components/trainer",
+    },
+    {
+      "name": "Simulator",
+      "path": "components/simulator",
+    },
+    {
+      "name": "device",
+      "path": "components/device",
+    },
+  ],
+  "settings": {},
+}
