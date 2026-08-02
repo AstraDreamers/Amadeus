@@ -13,9 +13,9 @@
 
 **Amadeus** is a lightweight, edge-AI system designed for real-time Beats Per Minute (BPM) estimation from live music streams. Driven by a custom Binary Neural Network (BNN), it is fully optimized to run on resource-constrained microcontrollers like the ESP32-C3 (RISC-V).
 
-This project's name is inspired by the advanced AI system *Amadeus* created by 2 neuroscientists *Makise Kurisu* and *Hiyajo Maho* in **Steins;Gate 0** movie.
+This project's name is inspired by the advanced AI system *Amadeus* created by 2 neuroscientists and researchers *Makise Kurisu* and *Hiyajo Maho* in [**Steins;Gate 0**](https://steins-gate.fandom.com/wiki/Steins;Gate_0_(anime)) movie.
 
-***El. Psy. Congroo.***
+***"This is the choice of Steins Gate. El. Psy. Congroo."***
 
 # Technicial Architecture
 
@@ -24,6 +24,9 @@ Coming soon!
 # Basic Instructions
 
 Coming soon!
+
+# Under The Hood
+
 
 # References & Citations
 
