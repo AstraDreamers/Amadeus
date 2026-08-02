@@ -1,20 +1,18 @@
-# Arch & System
 .DS_Store
 *.swp
 *.out
 
-# ESP-IDF Build Artifacts
-firmware/build/
-firmware/sdkconfig
-firmware/sdkconfig.old
+components/simulator/build/
 
-# Python & Trainer
-trainer/.venv/
-trainer/__pycache__/
-trainer/data/*.wav
-trainer/*.pt
-trainer/*.pth
+components/device/build/
+components/device/sdkconfig
+components/device/sdkconfig.old
 
-# IDE
+components/trainer/.venv/
+components/trainer/__pycache__/
+components/trainer/data/*.wav
+components/trainer/*.pt
+components/trainer/*.pth
+
 .vscode/
 .idea/
