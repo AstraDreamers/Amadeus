@@ -9,7 +9,7 @@
       "path": "components/simulator",
     },
     {
-      "name": "device",
+      "name": "Device",
       "path": "components/device",
     },
   ],
