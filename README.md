@@ -13,19 +13,44 @@
 
 **Amadeus** is a lightweight, edge-AI system designed for real-time Beats Per Minute (BPM) estimation from live music streams. Driven by a custom Binary Neural Network (BNN), it is fully optimized to run on resource-constrained microcontrollers like the ESP32-C3 (RISC-V).
 
-This project's name is inspired by the advanced AI system *Amadeus* created by 2 neuroscientists and researchers *Makise Kurisu* and *Hiyajo Maho* in [**Steins;Gate 0**](https://steins-gate.fandom.com/wiki/Steins;Gate_0_(anime)) movie.
+This project's name is inspired by the advanced AI system _Amadeus_ created by 2 neuroscientists and researchers _Makise Kurisu_ and _Hiyajo Maho_ in [**Steins;Gate 0**](<https://steins-gate.fandom.com/wiki/Steins;Gate_0_(anime)>) movie.
 
-***"This is the choice of Steins Gate. El. Psy. Congroo."***
+> **_"This is the choice of Steins Gate. El. Psy. Congroo."_**
 
 # Technical Architecture
 
 This project is divided into 3 subcomponents: **trainer**, **simulator** and **device**.
 
-## Trainer (`~/components/trainer/`)
+## Trainer Component
 
-## Simulator (`~/components/simulator/`)
+- This component trains the Binary Neural Network, export the weights and thresholds to **simulator** component.
 
-## Device (`~/components/device/`)
+| **Specification** | **Value**             |
+| :---------------- | :-------------------- |
+| **Path**          | `components/trainer/` |
+| **Languages**     | Python                |
+
+## Simulator Component
+
+- This component implements the whole Binary Neural Network (**forward propagation only**) from scratch, and acts as a Proof of Concept (PoC) of the whole project.
+
+| **Specification**      | **Value**                            |
+| :--------------------- | :----------------------------------- |
+| **Path**               | `components/simulator/`              |
+| **Languages**          | C++26                                |
+| **CMake Version**      | CMake 4.2+                           |
+| **Compiler Version**   | `clang++` $\geq 18$, `g++` $\geq 14$ |
+| **External Libraries** | None.                                |
+
+## Device Component
+
+- This component implements the PoC from **simulator** component to the MCU.
+
+| **Specification** | **Value**            |
+| :---------------- | :------------------- |
+| **Path**          | `components/device/` |
+| **Languages**     | C++26, C23           |
+| **CMake Version** | CMake 3.16+          |
 
 # Basic Instructions
 
