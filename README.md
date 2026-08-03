@@ -17,18 +17,24 @@ This project's name is inspired by the advanced AI system *Amadeus* created by 2
 
 ***"This is the choice of Steins Gate. El. Psy. Congroo."***
 
-# Technicial Architecture
+# Technical Architecture
 
-Coming soon!
+This project is divided into 3 subcomponents: **trainer**, **simulator** and **device**.
+
+## Trainer (`~/components/trainer/`)
+
+## Simulator (`~/components/simulator/`)
+
+## Device (`~/components/device/`)
 
 # Basic Instructions
 
 Coming soon!
 
-# Under The Hood
+# How it actually works
 
 Coming soon!
 
 # References & Citations
 
-4. [Yuan, C., & Agaian, S. S. (2023). A comprehensive review of binary neural network. Artificial Intelligence Review, 56(11), 12949-13013.](https://arxiv.org/pdf/2110.06804)
+1. [Yuan, C., & Agaian, S. S. (2023). A comprehensive review of binary neural network. Artificial Intelligence Review, 56(11), 12949-13013.](https://arxiv.org/pdf/2110.06804)
