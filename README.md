@@ -17,11 +17,11 @@
 >
 > **_"This is the choice of Steins Gate. El. Psy. Congroo."_**
 
-# Technical Architecture
+## Technical Architecture
 
 This project is divided into 3 subcomponents: **trainer**, **simulator** and **device**.
 
-## Trainer Component
+### Trainer Component
 
 - This component trains the Binary Neural Network, export the weights and thresholds to **simulator** component.
 
@@ -30,7 +30,7 @@ This project is divided into 3 subcomponents: **trainer**, **simulator** and **d
 | **Path**          | `components/trainer/` |
 | **Languages**     | Python                |
 
-## Simulator Component
+### Simulator Component
 
 - This component implements the whole Binary Neural Network (**forward propagation only**) from scratch, and acts as a Proof of Concept (PoC) of the whole project.
 
@@ -42,7 +42,7 @@ This project is divided into 3 subcomponents: **trainer**, **simulator** and **d
 | **Compiler Version**   | `clang++` $\geq 18$, `g++` $\geq 14$ |
 | **External Libraries** | None.                                |
 
-## Device Component
+### Device Component
 
 - This component implements the PoC from **simulator** component to the MCU.
 
@@ -52,14 +52,14 @@ This project is divided into 3 subcomponents: **trainer**, **simulator** and **d
 | **Languages**     | C++26, C23           |
 | **CMake Version** | CMake 3.16+          |
 
-# Basic Instructions
+## Basic Instructions
 
 Coming soon!
 
-# How it actually works
+## How it actually works
 
 Coming soon!
 
-# References & Citations
+## References & Citations
 
 1. [Yuan, C., & Agaian, S. S. (2023). A comprehensive review of binary neural network. Artificial Intelligence Review, 56(11), 12949-13013.](https://arxiv.org/pdf/2110.06804)
