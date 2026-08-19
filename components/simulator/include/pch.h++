@@ -16,4 +16,6 @@ Amadeus - Binary Neural Network (BNN) AI that detects BPM in music at real time.
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+#include <array>
 #include <iostream>
+#include <span>
