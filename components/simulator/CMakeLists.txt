@@ -16,7 +16,44 @@
 
 cmake_minimum_required(VERSION 4.2)
 
-project(simulator LANGUAGES CXX)
+project(simulator LANGUAGES CXX VERSION 1.0)
+
+set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(WIN32)
+	set(BUILD_SHARED_LIBS		OFF	CACHE BOOL "" FORCE)
+	set(SFML_STATIC_LIBRARIES	ON	CACHE BOOL "" FORCE)
+else()
+	set(BUILD_SHARED_LIBS		ON	CACHE BOOL "" FORCE)
+	set(SFML_STATIC_LIBRARIES	OFF	CACHE BOOL "" FORCE)
+endif()
+
+set(MBEDTLS_THREADING_C ON CACHE BOOL "" FORCE)
+set(MBEDTLS_THREADING_PTHREAD ON CACHE BOOL "" FORCE)
+set(SFML_BUILD_NETWORK OFF CACHE BOOL "" FORCE)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+
+include(FetchContent)
+
+FetchContent_Declare(
+	sfml
+	GIT_REPOSITORY 	https://github.com/SFML/SFML.git
+	GIT_TAG 		3.1.0
+	GIT_SHALLOW 	ON
+)
+
+FetchContent_MakeAvailable(sfml)
+
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(FFMPEG REQUIRED IMPORTED_TARGET
+    libavcodec
+    libavformat
+    libavutil
+    libswscale
+)
 
 add_executable(${PROJECT_NAME} 
     src/main.c++
@@ -68,4 +105,12 @@ target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_26)
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE
+	SFML::Graphics
+	SFML::Audio
+	SFML::Window
+	SFML::System
+    PkgConfig::FFMPEG
 )

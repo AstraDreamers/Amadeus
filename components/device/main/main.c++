@@ -1,0 +1,1 @@
+extern "C" auto app_main() -> void {}

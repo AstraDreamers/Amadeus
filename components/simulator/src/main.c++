@@ -16,7 +16,36 @@ Amadeus - Binary Neural Network (BNN) AI that detects BPM in music at real time.
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-auto main() -> int {
-    std::cout << "Hello World!\n";
+struct av_format_context_deleter {
+    auto operator()(AVFormatContext *context) const -> void {
+        if (context != nullptr) {
+            avformat_close_input(&context);
+        }
+    }
+};
+
+auto print_error(int32_t error_code) {
+    std::array<char, AV_ERROR_MAX_STRING_SIZE> buffer{};
+    av_strerror(error_code, buffer.data(), buffer.size());
+    std::println(stderr, "{}", buffer.data());
+}
+
+auto main() -> int32_t {
+    const std::string filename{"crush_tekk.mp3"};
+
+    std::unique_ptr<AVFormatContext, av_format_context_deleter> format_context{};
+
+    {
+        AVFormatContext *format_context_raw{nullptr};
+
+        if (int32_t return_value{avformat_open_input(&format_context_raw, filename.c_str(), nullptr, nullptr)};
+            return_value < 0) {
+            print_error(return_value);
+            return -1;
+        }
+
+        format_context.reset(format_context_raw);
+    }
+
     return 0;
 }
