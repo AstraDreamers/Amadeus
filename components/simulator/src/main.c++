@@ -1,3 +1,5 @@
+#include <algorithm>
+
 /*
 Amadeus - Binary Neural Network (BNN) AI that detects BPM in music at real time.
     Copyright (C) 2026  AstraDreamers
@@ -17,12 +19,43 @@ Amadeus - Binary Neural Network (BNN) AI that detects BPM in music at real time.
 */
 
 auto main() -> int32_t {
+    sf::RenderWindow window(sf::VideoMode({1920, 1080}, 32), "simulator", sf::Style::Close, sf::State::Fullscreen);
+    window.setFramerateLimit(144U);
+
     sf::SoundBuffer buffer("crush_tekk.mp3");
     sf::Sound       sound(buffer);
 
     sound.play();
 
-    while (sound.getStatus() == sf::Sound::Status::Playing) {
+    sf::VertexArray array;
+    array.setPrimitiveType(sf::PrimitiveType::Lines);
+    array.resize(1920U);
+
+    std::span<const int16_t> sound_buffer(buffer.getSamples(), buffer.getSampleCount());
+
+    while (window.isOpen()) {
+        while (const std::optional event{window.pollEvent()}) {
+            if (event->is<sf::Event::Closed>()) {
+                window.close();
+            }
+        }
+
+        int64_t position =
+            static_cast<int64_t>(static_cast<float>(sound_buffer.size()) *
+                                 (sound.getPlayingOffset().asSeconds() / buffer.getDuration().asSeconds()));
+
+        position = std::min<int64_t>(position, sound_buffer.size() - 1920U);
+
+        for (int32_t i{0}; i < 1920; i++) {
+            array[i].position = {
+                static_cast<float>(i),
+                (1080.F / 2.F) * (static_cast<float>(sound_buffer[i + position]) / static_cast<float>(INT16_MAX)) +
+                    (1080.F / 2.F)};
+        }
+
+        window.clear();
+        window.draw(array);
+        window.display();
     }
 
     return 0;
