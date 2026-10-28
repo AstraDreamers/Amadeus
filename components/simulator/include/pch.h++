@@ -19,8 +19,14 @@ Amadeus - Binary Neural Network (BNN) AI that detects BPM in music at real time.
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
+#include <libavutil/channel_layout.h>
 #include <libavutil/error.h>
+#include <libavutil/samplefmt.h>
+#include <libswresample/swresample.h>
 }
+
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
 
 #include <array>
 #include <memory>
