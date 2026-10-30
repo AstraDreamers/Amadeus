@@ -3,6 +3,10 @@
 *.out
 
 components/simulator/build/
+components/simulator/.cache/
+components/simulator/.idea/
+components/simulator/cmake-build-debug/
+components/simulator/cmake-build-release/
 
 components/device/build/
 components/device/sdkconfig

@@ -10,10 +10,6 @@
 
 <h3>A "simple" neural network.</h3>
 
-[![C++26](doc/assets/badge_cpp.svg)](https://cppreference.com/cpp/26)
-[![SFML](doc/assets/badge_sfml.svg)](https://github.com/SFML/SFML/releases/tag/3.1.0)
-[![License](doc/assets/badge_license.svg)](LICENSE)
-
 (⁠◕⁠ᴗ⁠◕⁠✿⁠)
 
 </div>
@@ -37,34 +33,7 @@ This project is divided into 3 subcomponents: **trainer**, **simulator** and **d
 
 ### Trainer Component
 
-- This component trains the Binary Neural Network, export the weights and thresholds to **simulator** component.
-
-| **Specification** | **Value**             |
-| :---------------- | :-------------------- |
-| **Path**          | `components/trainer/` |
-| **Languages**     | Python                |
-
-### Simulator Component
-
-- This component implements the whole Binary Neural Network (**forward propagation only**) from scratch, and acts as a Proof of Concept (PoC) of the whole project.
-
-| **Specification**      | **Value**                            |
-| :--------------------- | :----------------------------------- |
-| **Path**               | `components/simulator/`              |
-| **Languages**          | C++26                                |
-| **CMake Version**      | CMake 4.2+                           |
-| **Compiler Version**   | `clang++` $\geq 18$, `g++` $\geq 14$ |
-| **External Libraries** | None.                                |
-
-### Device Component
-
-- This component implements the PoC from **simulator** component to the MCU.
-
-| **Specification** | **Value**            |
-| :---------------- | :------------------- |
-| **Path**          | `components/device/` |
-| **Languages**     | C++26, C23           |
-| **CMake Version** | CMake 3.16+          |
+Coming soon!
 
 ---
 
