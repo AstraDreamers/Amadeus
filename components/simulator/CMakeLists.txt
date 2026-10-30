@@ -16,7 +16,10 @@
 
 cmake_minimum_required(VERSION 4.2)
 
-project(simulator LANGUAGES CXX VERSION 1.0)
+project(component_simulator 
+    LANGUAGES CXX 
+    VERSION 1.0
+)
 
 set(CMAKE_CXX_STANDARD 26)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
