@@ -29,11 +29,9 @@
 
 ## Technical Architecture
 
-This project is divided into 3 subcomponents: **trainer**, **simulator** and **device**.
+This project is divided into 3 subcomponents: [**trainer**](components/trainer/README.md), [**simulator**](components/simulator/README.md) and [**device**](components/device/README.md).
 
-### Trainer Component
-
-Coming soon!
+For further information: Coming Soon!
 
 ---
 
